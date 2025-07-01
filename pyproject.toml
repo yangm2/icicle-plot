@@ -1,0 +1,18 @@
+[project]
+name = "icicle-plot"
+version = "0.1.0"
+description = "generate an icicle plot from hierarchical data"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "plotly>=6.2.0",
+    "polars>=1.31.0",
+]
+
+[dependency-groups]
+dev = [
+    "mypy>=1.16.1",
+    "pyrefly>=0.22.0",
+    "ruff>=0.12.1",
+    "ty>=0.0.1a12",
+]
