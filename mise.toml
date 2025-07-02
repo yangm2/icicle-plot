@@ -2,10 +2,8 @@
 uv = "pipx" # defined by "mise link uv@pipx `which uv`"
 
 [tasks]
-fmt = """
-mise fmt
-uv run ruff format
-"""
+main = "uv run python src/main.py --output output"
+fmt = "mise fmt && uv run ruff format"
 
 [tasks.lint]
 wait_for = "fmt"

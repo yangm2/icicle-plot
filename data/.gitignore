@@ -1,0 +1,5 @@
+# Never check in any files in the data directory
+# This is where input data files are stored, and they should not be published
+# to the repository, as they may contain sensitive information or large datasets.
+*
+**/*

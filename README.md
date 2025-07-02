@@ -40,4 +40,7 @@ produce plot of hierarchical data
   ```sh
   % mise tasks ls
   ```
-  
+- Generate plot
+  ```sh
+  % mise r main --input data/input.toml
+  ```
