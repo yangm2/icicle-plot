@@ -13,7 +13,7 @@ run = "uv run ruff check"
 
 [tasks.typecheck-mypy]
 wait_for = "fmt"
-run = "uv run mypy . --check-untyped-defs"
+run = "uv run mypy . --strict --check-untyped-defs"
 
 [tasks.typecheck-pyrefly]
 wait_for = "fmt"

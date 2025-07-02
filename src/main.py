@@ -22,7 +22,7 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
-def main():
+def main() -> None:
     args = parse_args()
     _input_data = tomllib.loads(args.input.read_text())
     _output_path: Path = args.output
