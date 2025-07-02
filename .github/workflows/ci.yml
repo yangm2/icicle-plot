@@ -1,0 +1,45 @@
+Name: CI
+
+on:
+  push:
+    branches:
+      - main
+      - 'releases/**'
+  pull_request:
+    types: [opened, reopened, review_requested]
+jobs:
+    checks:
+        name: Run checks
+        runs-on: ubuntu-latest
+        
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: "Set up Python"
+              uses: actions/setup-python@v5
+              with:
+                python-version-file: "pyproject.toml"
+                enable-cache: true
+                cache-dependency-glob: "uv.lock"
+
+            - name: Check Ruff Format
+              run: |
+                  uv run ruff format --check
+
+            - name: Check Ruff Lint
+              run: |
+                  uv run ruff lint --check
+
+            - name: Check Mypy Type Checking
+              run: |
+                  uv run mypy . --strict --show-error-codes
+            
+            - name: Check Pyrefly Type Checking
+              run: |
+                  uv run pyrefly check
+
+            - name: Check Ty Type Checking
+              run: |
+                  uv run ty check
+

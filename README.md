@@ -29,3 +29,14 @@ produce plot of hierarchical data
   % uv lock --upgrade
   ```
 
+## Development with [mise-en-place](https://mise.jdx.dev)
+
+- run all checks
+  ```sh
+  % mise r all-checks
+  ```
+- list individual tasks
+  ```sh
+  % mise tasks ls
+  ```
+  
