@@ -27,6 +27,9 @@ jobs:
               with:
                 python-version-file: "pyproject.toml"
 
+            - name: Install the project
+              run: uv sync --locked --all-extras --dev
+
             - name: Check Ruff Format
               run: |
                   uv run ruff format --check
