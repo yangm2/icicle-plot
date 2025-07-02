@@ -1,4 +1,5 @@
 # icicle-plot
+[![CI](https://github.com/yangm2/icicle-plot/actions/workflows/ci.yml/badge.svg?branch=main&event=push)](https://github.com/yangm2/icicle-plot/actions/workflows/ci.yml)
 produce plot of hierarchical data
 
 ## Generate plot
