@@ -33,7 +33,7 @@ jobs:
 
             - name: Check Ruff Lint
               run: |
-                  uv run ruff lint --check
+                  uv run ruff --check
 
             - name: Check Mypy Type Checking
               run: |
