@@ -1,5 +1,4 @@
-Name: CI
-
+name: CI
 on:
   push:
     branches:
@@ -7,6 +6,7 @@ on:
       - 'releases/**'
   pull_request:
     types: [opened, reopened, review_requested]
+
 jobs:
     checks:
         name: Run checks
