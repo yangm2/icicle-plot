@@ -11,6 +11,7 @@ dependencies = [
 
 [dependency-groups]
 dev = [
+    "complexipy>=3.0.0",
     "mypy>=1.16.1",
     "pyrefly>=0.22.0",
     "ruff>=0.12.1",

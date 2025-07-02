@@ -4,6 +4,7 @@ uv = "pipx" # defined by "mise link uv@pipx `which uv`"
 [tasks]
 main = "uv run python src/main.py --output output"
 fmt = "mise fmt && uv run ruff format"
+complex = "uv run complexipy ."
 
 [tasks.lint]
 wait_for = "fmt"

@@ -50,3 +50,8 @@ jobs:
               run: |
                   uv run ty check
 
+            - name: Check Python Code Complexity
+              uses: rohaquinlop/complexipy-action@v1
+              with:
+                paths: '.'  # Analyze the entire repository
+
