@@ -1,6 +1,8 @@
 import argparse
 from pathlib import Path
 import tomllib
+from typing import Any, Dict
+from pprint import pprint
 
 
 def parse_args() -> argparse.Namespace:
@@ -22,9 +24,22 @@ def parse_args() -> argparse.Namespace:
     return parser.parse_args()
 
 
+def ingest_input(input_path: Path) -> Dict[str, Any]:
+    """Load the input TOML file."""
+    with input_path.open("rb") as f:
+        d = tomllib.load(f)
+        pprint(f"Loaded input from {input_path}:")
+        pprint(d)
+        return d
+
+
 def main() -> None:
     args = parse_args()
-    _input_data = tomllib.loads(args.input.read_text())
+
+    d: Dict[str, Any] = ingest_input(args.input)
+    if not isinstance(d, dict):
+        raise ValueError(f"Expected a dictionary from {args.input}, got {type(d)}")
+
     _output_path: Path = args.output
     print("Hello from icicle-plot!")
 

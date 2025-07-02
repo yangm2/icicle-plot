@@ -43,5 +43,5 @@ produce plot of hierarchical data
   ```
 - Generate plot
   ```sh
-  % mise r main --input data/input.toml
+  % mise r main --input examples/example1.toml
   ```

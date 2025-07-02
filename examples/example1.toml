@@ -1,0 +1,87 @@
+[[lookup.assets.stock.AAPL]]
+type = "stock"
+name = "Apple Inc."
+class = "U.S. Stocks"
+subclass = "Large Cap Core"
+
+[[lookup.assets.stock.AMZN]]
+type = "stock"
+name = "Amazon.com Inc."
+class = "U.S. Stocks"
+subclass = "Large Cap Core"
+
+[[lookup.assets.stock.NVDA]]
+type = "stock"
+name = "Nvidia Corporation"
+class = "U.S. Stocks"
+subclass = "Large Cap Growth"
+
+[[lookup.assets.etf.SOXX]]
+type = "etf"
+name = "iShares PHLX Semiconductor ETF"
+weights = ["large": ["value": 11, "blend": 33, "growth": 31], "mid": ["value": 2, "blend": 3, "growth": 1], "small": ["value": 0, "blend": 0, "growth": 0]]
+
+
+
+[institution.first_national_bank]
+name = "First National Bank"
+
+[institution.first_national_bank.accounts.checking.assets]
+name = "Checking"
+type = "cash"
+denomination = "USD"
+value = 1000.00
+
+[institution.first_national_bank.accounts.brokerage]
+name = "Brokerage Account"
+type = "investment"
+
+[[institution.first_national_bank.accounts.brokerage.assets]]
+type = "stock"
+symbol = "AAPL"
+quantity = 1
+
+[[institution.first_national_bank.accounts.brokerage.assets]]
+type = "stock"
+symbol = "AMZN"
+quantity = 2
+
+[[institution.first_national_bank.accounts.brokerage.assets]]
+type = "stock"
+symbol = "GOOGL"
+quantity = 3
+
+[[institution.first_national_bank.accounts.brokerage.assets]]
+type = "stock"
+symbol = "META"
+quantity = 4
+
+[[institution.first_national_bank.accounts.brokerage.assets]]
+type = "stock"
+symbol = "MSFT"
+quantity = 5
+
+[[institution.first_national_bank.accounts.brokerage.assets]]
+type = "stock"
+symbol = "NVDA"
+quantity = 6
+
+[[institution.first_national_bank.accounts.brokerage.assets]]
+type = "stock"
+symbol = "TSLA"
+quantity = 7
+
+[instituion.brokers_r_us]
+name = "Brokers R Us"
+
+[instituion.brokers_r_us.accounts.401k]
+name = "401k"
+type = "retirement"
+tax_deferred = false
+
+[[instituion.brokers_r_us.accounts.401k.assets]]
+type = "stock"
+symbol = "GLDM"
+quantity = 8
+
+[[instituion.brokers_r_us.accounts.401k.assets]]

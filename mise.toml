@@ -26,7 +26,7 @@ run = "uv run ty check"
 depends = ["typecheck-mypy", "typecheck-pyrefly", "typecheck-ty"]
 
 [tasks.all-checks]
-depends = ["fmt", "lint", "typecheck"]
+depends = ["fmt", "lint", "typecheck", "complex"]
 
 # # mise config files are hierarchical. mise will find all of the config files
 # # in all parent directories and merge them together.
