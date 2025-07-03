@@ -5,6 +5,7 @@ description = "generate an icicle plot from hierarchical data"
 readme = "README.md"
 requires-python = ">=3.13"
 dependencies = [
+    "etf-scraper>=0.1.2",
     "plotly>=6.2.0",
     "polars>=1.31.0",
 ]
@@ -17,3 +18,8 @@ dev = [
     "ruff>=0.12.1",
     "ty>=0.0.1a12",
 ]
+
+[[tool.mypy.overrides]]
+module = ["etf_scraper.*"]
+follow_untyped_imports = true
+

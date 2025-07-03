@@ -3,6 +3,7 @@ from pathlib import Path
 import tomllib
 from typing import Any, Dict
 from pprint import pprint
+from etf_scraper import ETFScraper  # type: ignore[attr-defined]
 
 
 def parse_args() -> argparse.Namespace:
@@ -39,6 +40,10 @@ def main() -> None:
     d: Dict[str, Any] = ingest_input(args.input)
     if not isinstance(d, dict):
         raise ValueError(f"Expected a dictionary from {args.input}, got {type(d)}")
+
+    etf = ETFScraper()
+    ivv = etf.query_holdings(ticker="IVV", holdings_date=None)
+    pprint(ivv)
 
     _output_path: Path = args.output
     print("Hello from icicle-plot!")

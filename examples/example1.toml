@@ -16,12 +16,28 @@ name = "Nvidia Corporation"
 class = "U.S. Stocks"
 subclass = "Large Cap Growth"
 
+# https://www.morningstar.com/etfs/xnas/soxx/portfolio
+# Stock Style
 [[lookup.assets.etf.SOXX]]
 type = "etf"
 name = "iShares PHLX Semiconductor ETF"
-weights = ["large": ["value": 11, "blend": 33, "growth": 31], "mid": ["value": 2, "blend": 3, "growth": 1], "small": ["value": 0, "blend": 0, "growth": 0]]
 
+[[lookup.assets.etf.SOXX.weights.large]]
+value = 11
+blend = 33
+growth = 31
 
+[[lookup.assets.etf.SOXX.weights.mid]]
+value = 0
+blend = 5
+growth = 12
+
+[[lookup.assets.etf.SOXX.weights.small]]
+value = 1
+blend = 3
+growth = 3
+
+###
 
 [institution.first_national_bank]
 name = "First National Bank"
@@ -70,6 +86,8 @@ quantity = 6
 type = "stock"
 symbol = "TSLA"
 quantity = 7
+
+###
 
 [instituion.brokers_r_us]
 name = "Brokers R Us"
